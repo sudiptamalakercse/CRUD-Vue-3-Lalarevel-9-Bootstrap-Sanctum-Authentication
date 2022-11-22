@@ -60,7 +60,7 @@
 							aria-expanded="false"
 							class="collapse first-level"
 						>
-							<li v-if="is_admin_authenticate" class="sidebar-item">
+							<li v-if="is_user_authenticate" class="sidebar-item">
 								<router-link
 									:to="{ name: 'add_post_by_admin' }"
 									class="sidebar-link"
