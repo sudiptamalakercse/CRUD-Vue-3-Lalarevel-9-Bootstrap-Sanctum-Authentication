@@ -7,19 +7,19 @@
 			<div class="card mb-2">
 				<div class="card-body">
 					<h5 class="card-title d-inline">All Posts</h5>
-					<input
+					<!-- <input
 						@keyup.enter="onChangeSearchValue"
 						type="text"
 						style="float: right"
 						placeholder="Search &amp; Enter"
 						:value="search_value"
-					/>
+					/> -->
 				</div>
 				<div class="table-responsive">
 					<table class="table">
 						<thead class="thead-light">
 							<tr>
-								<th class="text-center align-middle">
+								<!-- <th class="text-center align-middle">
 									<span v-if="post_list.length > 1">
 										{{ all_select == true ? 'Uncheck All' : 'Check All' }}
 									</span>
@@ -31,7 +31,7 @@
 										@click="onSelectAllViaCheckBox"
 										v-model="all_select"
 									/>
-								</th>
+								</th> -->
 								<th class="text-center align-middle" scope="col">Id</th>
 								<th class="text-center align-middle" scope="col">Task</th>
 								<th class="text-center align-middle" scope="col">Actions</th>
@@ -50,7 +50,7 @@
 									background: ids_for_delete.includes(post.id)
 								}"
 							>
-								<th class="text-center">
+								<!-- <th class="text-center">
 									<input
 										v-if="post_list.length > 1"
 										type="checkbox"
@@ -58,7 +58,7 @@
 										v-model="ids_for_delete"
 										:value="post.id"
 									/>
-								</th>
+								</th> -->
 								<td class="text-center">{{ post.id }}</td>
 								<td class="text-center">{{ post.task }}</td>
 								<td class="text-center">
@@ -103,7 +103,7 @@
 						</tbody>
 					</table>
 				</div>
-				<div
+				<!-- <div
 					class="text-center"
 					v-if="post_list.length > 1 && is_user_authenticate == true"
 				>
@@ -119,7 +119,7 @@
 						}"
 						>Delete Selected Records</span
 					>
-				</div>
+				</div> -->
 			</div>
 
 			<pagination

@@ -102,14 +102,6 @@
 							class="collapse first-level"
 						>
 							<li class="sidebar-item">
-								<router-link
-									:to="{ name: 'sign_up_admin' }"
-									class="sidebar-link"
-									><i class="mdi mdi-account-circle"></i
-									><span class="hide-menu"> Admin </span>
-								</router-link>
-							</li>
-							<li class="sidebar-item">
 								<router-link :to="{ name: 'sign_up_user' }" class="sidebar-link"
 									><i class="mdi mdi-account"></i
 									><span class="hide-menu"> User </span>
@@ -135,12 +127,6 @@
 							class="collapse first-level"
 						>
 							<li class="sidebar-item">
-								<router-link :to="{ name: 'log_in_admin' }" class="sidebar-link"
-									><i class="mdi mdi-account-circle"></i
-									><span class="hide-menu"> Admin </span>
-								</router-link>
-							</li>
-							<li class="sidebar-item">
 								<router-link :to="{ name: 'log_in_user' }" class="sidebar-link"
 									><i class="mdi mdi-account"></i
 									><span class="hide-menu"> User </span>
@@ -164,24 +150,6 @@
 							aria-expanded="false"
 							><i class="mdi mdi-blur-linear"></i
 							><span class="hide-menu">Full Width</span>
-						</router-link>
-					</li>
-					<li v-if="is_user_authenticate" class="sidebar-item">
-						<router-link
-							:to="{ name: 'formbasic' }"
-							class="sidebar-link waves-effect waves-dark sidebar-link"
-							aria-expanded="false"
-							><i class="mdi mdi-note-outline"></i
-							><span class="hide-menu">Form Basic</span>
-						</router-link>
-					</li>
-					<li v-if="is_user_authenticate" class="sidebar-item">
-						<router-link
-							:to="{ name: 'formwizard' }"
-							class="sidebar-link waves-effect waves-dark sidebar-link"
-							aria-expanded="false"
-							><i class="mdi mdi-note-plus"></i
-							><span class="hide-menu">Form Wizard</span>
 						</router-link>
 					</li>
 					<li class="sidebar-item p-3">

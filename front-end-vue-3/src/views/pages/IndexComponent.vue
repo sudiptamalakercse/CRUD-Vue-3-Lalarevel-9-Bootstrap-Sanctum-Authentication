@@ -15,7 +15,7 @@
 					Welcome to User Portal
 				</h3>
 				<h3 v-else class="error-subtitle mt-5 mb-5">
-					Welcome to Admin & User Portal
+					Welcome to User Portal
 				</h3>
 			</div>
 		</div>
@@ -51,7 +51,7 @@ export default {
 			} else if (is_user_authenticate.value == true) {
 				value = 'User';
 			} else {
-				value = 'Admin & User';
+				value = 'User';
 			}
 			cheange_breadcrumb_heading_and_title_heading(`${value} Portal`);
 

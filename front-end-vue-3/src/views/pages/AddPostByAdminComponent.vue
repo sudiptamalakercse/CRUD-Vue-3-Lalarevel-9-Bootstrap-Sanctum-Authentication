@@ -8,7 +8,7 @@
 			<div class="card">
 				<form class="form-horizontal" @submit.prevent="onAddPostClick()">
 					<div class="card-body">
-						<h4 class="card-title mt-3 mb-3 text-center">Add Post By Admin</h4>
+						<h4 class="card-title mt-3 mb-3 text-center">Add Post By User</h4>
 						<div class="form-group row">
 							<label
 								for="task"
@@ -90,12 +90,12 @@ export default {
 		const { user_data } = useIsAuthenticateComposable();
 
 		// Breadcrumb And Title related code
-		cheange_breadcrumb_heading_and_title_heading('Add Post By Admin');
+		cheange_breadcrumb_heading_and_title_heading('Add Post By User');
 
 		cheange_breadcrumb_links([
-			{ name: 'Admin Portal', name_of_route: 'home', disabled: false },
+			{ name: 'User Portal', name_of_route: 'home', disabled: false },
 			{
-				name: 'Add Post By Admin',
+				name: 'Add Post By User',
 				name_of_route: 'add_post_by_admin',
 				disabled: true
 			}

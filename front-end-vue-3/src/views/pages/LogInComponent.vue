@@ -123,7 +123,7 @@ export default {
 		);
 
 		cheange_breadcrumb_links([
-			{ name: 'Admin & User Portal', name_of_route: 'home', disabled: false },
+			{ name: 'User Portal', name_of_route: 'home', disabled: false },
 			{
 				name: `Log In As ${upper_case_user_type.value}`,
 				name_of_route: `log_in_${props.user_type}`,

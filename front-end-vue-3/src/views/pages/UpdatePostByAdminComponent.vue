@@ -9,7 +9,7 @@
 				<form class="form-horizontal" @submit.prevent="onUpdatePostClick()">
 					<div class="card-body">
 						<h4 class="card-title mt-3 mb-3 text-center">
-							Update Post By Admin
+							Update Post By User
 						</h4>
 						<div class="form-group row">
 							<label
@@ -95,17 +95,17 @@ export default {
 		const { user_data } = useIsAuthenticateComposable();
 
 		// Breadcrumb And Title related code
-		cheange_breadcrumb_heading_and_title_heading('Update Post By Admin');
+		cheange_breadcrumb_heading_and_title_heading('Update Post By User');
 
 		cheange_breadcrumb_links([
-			{ name: 'Admin Portal', name_of_route: 'home', disabled: false },
+			{ name: 'User Portal', name_of_route: 'home', disabled: false },
 			{
 				name: 'Posts',
 				name_of_route: 'show_posts_for_admin_and_user',
 				disabled: false
 			},
 			{
-				name: 'Update Post By Admin',
+				name: 'Update Post By User',
 				name_of_route: 'update_post_by_admin',
 				params: { post_id: props.post_id },
 				disabled: true

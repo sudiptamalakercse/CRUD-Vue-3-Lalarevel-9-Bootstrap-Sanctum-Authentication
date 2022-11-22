@@ -40,7 +40,7 @@
 					</span>
 					<span v-else class="logo-text ms-2 light-logo text-danger mt-2">
 						<!-- dark text -->
-						Admin & User Portal
+						User Portal
 					</span>
 					<!-- Logo icon -->
 					<!-- <b class="logo-icon"> -->
@@ -129,7 +129,7 @@
 					<!-- Search -->
 					<!-- ============================================================== -->
 				</ul>
-				<ul
+				<!-- <ul
 					v-if="is_admin_authenticate || is_user_authenticate"
 					class="navbar-nav float-start me-auto"
 				>
@@ -143,7 +143,7 @@
 							@keyup.enter="onChangeSearchValue"
 						/>
 					</li>
-				</ul>
+				</ul> -->
 				<!-- ============================================================== -->
 				<!-- Right side toggle and nav items -->
 				<!-- ============================================================== -->
