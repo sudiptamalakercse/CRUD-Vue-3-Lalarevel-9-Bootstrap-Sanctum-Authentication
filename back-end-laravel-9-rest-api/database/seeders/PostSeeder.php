@@ -16,11 +16,9 @@ class PostSeeder extends Seeder
     public function run()
     {
         $faker = Faker::create();
-        foreach (range(1, 5) as $value) {
+        foreach (range(1, 8) as $value) {
             DB::table('posts')->insert([
-                'name' => $faker->name(),
-                'city' => $faker->city(),
-                'fees' => 100.50,
+                'task' => $faker->randomElement($array = array('I am going to start reading at 10 pm.', "I am going to celebrate my friend's birthday tomorrow.", 'I will meet with my brother tomorrow.')),
                 'user_id' => 1,
             ]);
         }

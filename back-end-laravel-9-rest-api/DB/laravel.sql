@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 19, 2022 at 06:31 PM
+-- Generation Time: Nov 23, 2022 at 10:47 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -54,11 +54,11 @@ CREATE TABLE `migrations` (
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
-(1, '2014_10_12_000000_create_users_table', 1),
-(2, '2014_10_12_100000_create_password_resets_table', 1),
-(3, '2019_08_19_000000_create_failed_jobs_table', 1),
-(4, '2019_12_14_000001_create_personal_access_tokens_table', 1),
-(5, '2022_03_21_150727_create_posts_table', 1);
+(11, '2014_10_12_000000_create_users_table', 1),
+(12, '2014_10_12_100000_create_password_resets_table', 1),
+(13, '2019_08_19_000000_create_failed_jobs_table', 1),
+(14, '2019_12_14_000001_create_personal_access_tokens_table', 1),
+(15, '2022_03_21_150727_create_posts_table', 1);
 
 -- --------------------------------------------------------
 
@@ -94,13 +94,6 @@ CREATE TABLE `personal_access_tokens` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Dumping data for table `personal_access_tokens`
---
-
-INSERT INTO `personal_access_tokens` (`id`, `tokenable_type`, `tokenable_id`, `name`, `token`, `abilities`, `last_used_at`, `expires_at`, `created_at`, `updated_at`) VALUES
-(1, 'App\\Models\\User', 1, 'user1@gmail.com', '642bc97b9908ffc434bf866afdf46ccb98b9918749258fc84da3afc0d1fdded7', '[\"*\"]', '2022-11-19 11:28:24', NULL, '2022-11-19 11:21:12', '2022-11-19 11:28:24');
-
 -- --------------------------------------------------------
 
 --
@@ -120,9 +113,14 @@ CREATE TABLE `posts` (
 --
 
 INSERT INTO `posts` (`id`, `task`, `user_id`, `created_at`, `updated_at`) VALUES
-(1, 'I will walk next morning.', 1, '2022-11-19 11:21:38', '2022-11-19 11:27:56'),
-(2, 'I am going to read at 10 AM.', 1, '2022-11-19 11:23:22', '2022-11-19 11:23:22'),
-(3, 'I will meet with my brother tomorrow.', 1, '2022-11-19 11:24:31', '2022-11-19 11:24:31');
+(1, 'I will meet with my brother tomorrow.', 1, NULL, '2022-11-23 03:46:31'),
+(2, 'I will meet with my brother tomorrow.', 1, NULL, NULL),
+(3, 'I am going to celebrate my friend\'s birthday tomorrow.', 1, NULL, NULL),
+(4, 'I am going to start reading at 10 pm.', 1, NULL, NULL),
+(5, 'I will meet with my brother tomorrow.', 1, NULL, NULL),
+(6, 'I will meet with my brother tomorrow.', 1, NULL, NULL),
+(7, 'I will meet with my brother tomorrow.', 1, NULL, NULL),
+(8, 'I am going to celebrate my friend\'s birthday tomorrow.', 1, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -146,7 +144,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'user1', 'user1@gmail.com', NULL, '$2y$10$KxFzIIfCq1wPdxaa.CWt9.Xuw1FoBWllNfViMJ0/LXfwbOk0uUxGu', NULL, '2022-11-19 11:21:12', '2022-11-19 11:21:12');
+(1, 'user1', 'user1@gmail.com', NULL, '$2y$10$E0WC5Sfc2M.l3ZwUBpo23OxfpOUgNqsjBtGmPK9E1pA/QdDqkWHnO', NULL, NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -207,7 +205,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `password_resets`
@@ -225,7 +223,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `users`
